@@ -9,36 +9,14 @@ import Spinner from './elements/Spinner'
 import MovieThumb from './elements/MovieThumb'
 import LoadMoreBtn from './elements/LoadMoreBtn'
 
+// import custom hooks
+import { useHomeFetch } from './hooks/useHomeFetch'
+
 const Home = () => {
-    const [state, setState] = useState({products: []});
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+
+    const [{state, loading, error }, fetchProducts] = useHomeFetch();
 
     console.log(state)
-
-    const fetchProducts = async endpoint => {
-        setError(false);
-        setLoading(true);
-
-        try {
-            const result = await (await fetch(endpoint)).json();
-            console.log(result)
-            setState(prev => ({
-                ...prev,
-                products: [...result],
-                //heroImage: prev.heroImage || result.results.promote
-            }))
-        } catch(error) {
-            setError(true);
-            console.log(error);
-
-        }
-        setLoading(false);
-    }
-
-    useEffect(() => {
-        fetchProducts(`${API_URL}products`);
-    }, [])
 
     return(
         <>

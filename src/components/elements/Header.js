@@ -1,5 +1,16 @@
 import React from 'react';
 
-const Header = () => <div>Header</div>
+import logo from '../images/logo.png';
+import { StyledHeader, StyledLogo } from '../styles/StyledHeader'
+
+const Header = () => (
+
+<StyledHeader>
+    <div className="header-content">
+        <StyledLogo src={logo} alt="furuno-logo"/>
+    </div>
+</StyledHeader>
+
+)
 
 export default Header;

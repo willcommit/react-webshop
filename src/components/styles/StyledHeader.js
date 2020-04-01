@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
-  background: #1c1c1c;
+  background: #ffffff;
   padding: 0 20px;
   box-sizing: border-box;
 
@@ -19,7 +19,7 @@ export const StyledHeader = styled.div`
   }
 `;
 
-export const StyledRMDBLogo = styled.img`
+export const StyledLogo = styled.img`
   width: 250px;
   margin-top: 20px;
 
