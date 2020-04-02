@@ -16,11 +16,23 @@ const Home = () => {
 
     const [{state, loading, error }, fetchProducts] = useHomeFetch();
 
-    console.log(state)
+    // state.products.map(product => {
+    //     console.log(product.Name)
+    // })
+
+    //console.log(state.promoter ? ' ' : state.promoter.Price)
+
+    if(state.promoter) {
+        console.log(state.promoter.Price)
+    }
 
     return(
         <>
-            <HeroImage />
+            <HeroImage 
+                image={`${API_URL}${state.promoteImage}`}
+                //title={}
+                //text={state.promoteText}
+            />
             <SearchBar />
             <Grid />
             <MovieThumb />

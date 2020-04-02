@@ -7,9 +7,9 @@ export const StyledHeader = styled.div`
 
   .header-content {
     max-width: 1280px;
-    min-height: 120px;
+    min-height: auto;
     padding: 20px 0px;
-    margin: 0 auto;
+    margin: 0, auto;
     box-sizing: border-box;
 
     @media screen and (max-width: 500px) {
