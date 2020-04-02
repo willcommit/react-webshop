@@ -22,7 +22,7 @@ const Home = () => {
 
     //console.log(state.promoter ? ' ' : state.promoter.Price)
 
-    if(state.promoter) {
+    if(state.products.length > 0 ) {
         console.log(state.promoter.Price)
     }
 
@@ -30,8 +30,8 @@ const Home = () => {
         <>
             <HeroImage 
                 image={`${API_URL}${state.promoteImage}`}
-                //title={}
-                //text={state.promoteText}
+                title={state.promoteTitle}
+                text={state.promoteText}
             />
             <SearchBar />
             <Grid />

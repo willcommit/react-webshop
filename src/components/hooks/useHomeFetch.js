@@ -17,6 +17,7 @@ export const useHomeFetch = () => {
             setState(prev => ({
                 ...prev,
                 products: result,
+                promoter: result[0],
                 promoteImage: result[2].Product_image[0].url,
                 promoteTitle: result[1].Name,
                 promoteText:  result[1].Description              

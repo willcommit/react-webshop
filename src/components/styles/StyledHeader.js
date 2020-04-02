@@ -9,7 +9,7 @@ export const StyledHeader = styled.div`
     max-width: 1280px;
     min-height: auto;
     padding: 20px 0px;
-    margin: 0, auto;
+    margin: 0;
     box-sizing: border-box;
 
     @media screen and (max-width: 500px) {
@@ -21,7 +21,7 @@ export const StyledHeader = styled.div`
 
 export const StyledLogo = styled.img`
   width: 250px;
-  margin-top: 20px;
+  margin-top: 0;
 
   @media screen and (max-width: 500px) {
     width: 150px;
